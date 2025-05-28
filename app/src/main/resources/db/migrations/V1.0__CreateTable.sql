@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS public.books (
+	id SERIAL,
+	title VARCHAR(100) NOT NULL,
+	authors VARCHAR(255) NOT NULL,
+	publish_date DATE NOT NULL,
+	isbn VARCHAR(20) NOT NULL UNIQUE,
+	publishers VARCHAR(255) NOT NULL,
+	similar_books VARCHAR(255) NULL,
+	PRIMARY KEY(id)
+);
