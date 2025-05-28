@@ -86,7 +86,7 @@ public class PersistenceDAO {
             entityManager.getTransaction().begin();
 
             BookEntity entity = (BookEntity) entityManager
-                    .createNativeQuery("SELECT * FROM books WHERE title ILIKE :title", BookEntity.class)
+                    .createNativeQuery("SELECT * FROM books WHERE title ILIKE :title ORDER BY id", BookEntity.class)
                     .setParameter("title", title)
                     .getSingleResult(); 
 
@@ -109,7 +109,7 @@ public class PersistenceDAO {
         entityManager.getTransaction().begin();
 
         List<BookEntity> entityList = entityManager
-                .createNativeQuery("SELECT * FROM books WHERE authors ILIKE :author", BookEntity.class)
+                .createNativeQuery("SELECT * FROM books WHERE authors ILIKE :author ORDER BY id", BookEntity.class)
                 .setParameter("author", author)
                 .getResultList();
 
@@ -125,7 +125,7 @@ public class PersistenceDAO {
         entityManager.getTransaction().begin();
 
         List<BookEntity> list = entityManager
-                .createQuery("from books where publishDate between :date and :datePlusOne", BookEntity.class)
+                .createQuery("from books where publishDate between :date and :datePlusOne ordey by id", BookEntity.class)
                 .setParameter("date", date)
                 .setParameter("datePlusOne", date.plusDays(1))
                 .getResultList();
@@ -164,7 +164,7 @@ public class PersistenceDAO {
         entityManager.getTransaction().begin();
 
         List<BookEntity> list = entityManager
-                .createNativeQuery("SELECT * FROM books WHERE publishers ILIKE :publisher", BookEntity.class)
+                .createNativeQuery("SELECT * FROM books WHERE publishers ILIKE :publisher ORDER BY id", BookEntity.class)
                 .setParameter("publisher", publisher)
                 .getResultList();
 
@@ -181,7 +181,7 @@ public class PersistenceDAO {
         entityManager.getTransaction().begin();
 
         List<BookEntity> list = entityManager
-                .createNativeQuery("SELECT * FROM books WHERE similar_books ILIKE :similar", BookEntity.class)
+                .createNativeQuery("SELECT * FROM books WHERE similar_books ILIKE :similar ORDER BY id", BookEntity.class)
                 .setParameter("similar", similar)
                 .getResultList();
 

@@ -24,7 +24,7 @@ public class CsvBooksImporter implements BookImporter {
         String line;
 
         if (!buffer.readLine().equals(HEADER_LINE)) {
-            throw new RuntimeException("Arquivo não contém o cabeçalho correto.");
+            throw new RuntimeException("Incorrect header in CSV file.");
         }
 
         while((line = buffer.readLine()) != null) {
