@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="609711ec-acc0-4a5e-9b9b-a7835b63f90b" name="Changes" comment="" />
+    <list default="true" id="609711ec-acc0-4a5e-9b9b-a7835b63f90b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/vitorAlves/adapters/ui/TutorialUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/vitorAlves/adapters/ui/TutorialUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/Tutorial.md" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/tutorial.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +91,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "OpenRewrite.JavaxValidationMigrationToJakartaValidation.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/home/vitor-alves/Documents/Study/3698-java-clean-architecture-main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -226,7 +230,7 @@
       <workItem from="1748262541077" duration="5072000" />
       <workItem from="1748267880201" duration="5060000" />
       <workItem from="1748356217458" duration="3073000" />
-      <workItem from="1748438034603" duration="8700000" />
+      <workItem from="1748438034603" duration="10736000" />
     </task>
     <servers />
   </component>

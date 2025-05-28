@@ -11,8 +11,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.Objects;
 
 /**
  *
@@ -82,11 +84,11 @@ public class TutorialUI extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void setupMDText() {
-        File file = new File("src/main/resources/Tutorial.md");
+        InputStream inputStream = Objects.requireNonNull(getClass().getResourceAsStream("/tutorial.md"));
         StringBuilder content = new StringBuilder();
         
-        try (FileReader fileReader = new FileReader(file)) {
-            BufferedReader reader = new BufferedReader(fileReader);
+        try (InputStreamReader streamReader = new InputStreamReader(inputStream)) {
+            BufferedReader reader = new BufferedReader(streamReader);
             
             String line;
             while((line = reader.readLine()) != null) content.append(line);
